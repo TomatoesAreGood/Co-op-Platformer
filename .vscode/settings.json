@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Co-op Platformer.sln"
+    "dotnet.defaultSolution": "Co-op-Platformer.sln"
 }
