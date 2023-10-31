@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
         jumpHeight = 20f;
     }
 
-
     private void Update(){
         movementDirection = Input.GetAxis("Horizontal");
 
@@ -30,11 +29,17 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(0f,0f,0f);
         }
 
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
-        {
-            rb.velocity = new Vector2(movementDirection * moveSpeed, rb.velocity.y);
+        if (Input.GetKey(KeyCode.D)){
+            if (CanMoveRight()) {
+                rb.velocity = new Vector2(movementDirection * moveSpeed, rb.velocity.y);
+            }
         }
-        
+        if (Input.GetKey(KeyCode.A)){
+            if (CanMoveLeft()){
+                rb.velocity = new Vector2(movementDirection * moveSpeed, rb.velocity.y);
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.W) && CanJump())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
@@ -44,6 +49,16 @@ public class PlayerController : MonoBehaviour
  
     private bool CanJump(){
         return Physics2D.BoxCast(boxColl.bounds.center, boxColl.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
+    }
+
+    private bool CanMoveLeft()
+    {
+        return !Physics2D.BoxCast(boxColl.bounds.center, boxColl.bounds.size, 0f, Vector2.left, 0.1f, jumpableGround);
+    }
+
+    private bool CanMoveRight()
+    {
+        return !Physics2D.BoxCast(boxColl.bounds.center, boxColl.bounds.size, 0f, Vector2.right, 0.1f, jumpableGround);
     }
 
 
