@@ -6,7 +6,7 @@ using UnityEngine;
 
 
 
-public class PlayerController : MonoBehaviour
+public class FireBoy : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float moveSpeed;
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         }
     
     }
- 
+
     private bool CanJump(){
         return Physics2D.BoxCast(boxColl.bounds.center, boxColl.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
     }
