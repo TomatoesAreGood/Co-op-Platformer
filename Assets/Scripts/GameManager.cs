@@ -7,23 +7,18 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] FireBoy fireBoy;
     [SerializeField] WaterGirl waterGirl;
-
     [SerializeField] IntToText coinsText;
-
     [SerializeField] IntToText timeText;
-
-
     public static int Coins;
     public static float Timer;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         Timer = 120;
         Coins = 0;
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R)){
             SceneManager.LoadScene("GamePlay");
