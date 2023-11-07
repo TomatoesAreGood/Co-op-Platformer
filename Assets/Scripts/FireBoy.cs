@@ -9,6 +9,12 @@ using UnityEngine;
 public class FireBoy : Character
 {
     protected override void Update(){
+        if (Input.GetKey(KeyCode.Q))
+        {
+            if (HeldItem != null){
+                Drop();
+            }
+        }
         if (Input.GetKey(KeyCode.A))
         {
             if (this._movementDirection > -1f) {

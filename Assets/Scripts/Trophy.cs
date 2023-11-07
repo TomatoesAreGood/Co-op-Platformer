@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Trophy : Collectable
 {
+    private void Start(){
+        NextTimePickup = Time.time;
+    }
     protected override void OnTriggerEnter2D(UnityEngine.Collider2D other)
     {
-        if (other.gameObject.GetComponent<FireBoy>() != null || other.gameObject.GetComponent<WaterGirl>() != null)
+        if ((other.gameObject.GetComponent<FireBoy>() != null || other.gameObject.GetComponent<WaterGirl>() != null) && Time.time > NextTimePickup)
         {
             if (other.gameObject.GetComponent<Character>().HeldItem != null)
             {

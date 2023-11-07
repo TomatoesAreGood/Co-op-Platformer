@@ -28,6 +28,7 @@ public abstract class Character : MonoBehaviour
 
     public void Drop()
     {
+        HeldItem.NextTimePickup = Time.time + 1f;
         HeldItem.transform.parent = null;
         HeldItem = null;
     }

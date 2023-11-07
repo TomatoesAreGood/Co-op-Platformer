@@ -9,6 +9,12 @@ using UnityEngine;
 public class WaterGirl : Character
 {
     protected override void Update(){
+        if (Input.GetKey(KeyCode.RightControl))
+        {
+            if (HeldItem != null){
+                Drop();
+            }        
+        }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             if (this._movementDirection > -1)
