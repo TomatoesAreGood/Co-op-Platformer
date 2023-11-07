@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &8399563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0413176d81f49464d85de9e7b162fdbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NextTimePickup: 0
 --- !u!212 &8399564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1726,9 +1727,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 136.61
       objectReference: {fileID: 0}
+    - target: {fileID: 7545300139404938798, guid: 31063627919b7e94cb1f4666e858cc6a, type: 3}
+      propertyPath: _color
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7572824352743803571, guid: 31063627919b7e94cb1f4666e858cc6a, type: 3}
       propertyPath: m_Name
       value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478358077782985876, guid: 31063627919b7e94cb1f4666e858cc6a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478358077782985876, guid: 31063627919b7e94cb1f4666e858cc6a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478358077782985876, guid: 31063627919b7e94cb1f4666e858cc6a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.064552546
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
