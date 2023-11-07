@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class IntToText : MonoBehaviour
 {
-    private TextMeshProUGUI textValue;
+    private TextMeshProUGUI _textValue;
 
     private void Start()
     {
-        textValue = GetComponent<TextMeshProUGUI>();
+        _textValue = GetComponent<TextMeshProUGUI>();
     }
 
     public void UpdateText(int text)
     {
-        textValue.text = "" + text;
+        _textValue.text = "" + text;
     }
 }

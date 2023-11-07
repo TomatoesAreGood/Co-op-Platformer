@@ -4,35 +4,38 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    protected Rigidbody2D rb;
-    protected float moveSpeed;
-    protected float jumpHeight;
-    protected BoxCollider2D boxColl;
-    public LayerMask jumpableGround;
-    protected float movementDirection;
-    protected List<Collectable> inventory;
+    protected Rigidbody2D _rb;
+    protected float _moveSpeed;
+    protected float _jumpHeight;
+    protected BoxCollider2D _boxColl;
+    protected float _movementDirection;
+    public Transform Hand;
+    public LayerMask JumpableGround;
+    public Collectable HeldItem;
 
-    protected void Start(){
-        rb = GetComponent<Rigidbody2D>();
-        boxColl = GetComponent<BoxCollider2D>();
-        moveSpeed = 10f;
-        jumpHeight = 20f;
-        inventory = new List<Collectable>();
+
+    private void Start(){
+        _rb = GetComponent<Rigidbody2D>();
+        _boxColl = GetComponent<BoxCollider2D>();
+        _moveSpeed = 10f;
+        _jumpHeight = 20f;
+        HeldItem = null;
+        Hand = transform.GetChild(0).transform;
     }
 
     protected abstract void Update();
 
     protected bool CanJump(){
-        return Physics2D.BoxCast(boxColl.bounds.center, boxColl.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
+        return Physics2D.BoxCast(_boxColl.bounds.center, _boxColl.bounds.size, 0f, Vector2.down, 0.1f, JumpableGround);
     }
 
     protected bool CanMoveLeft()
     {
-        return !Physics2D.BoxCast(boxColl.bounds.center, boxColl.bounds.size, 0f, Vector2.left, 0.01f, jumpableGround);
+        return !Physics2D.BoxCast(_boxColl.bounds.center, _boxColl.bounds.size, 0f, Vector2.left, 0.01f, JumpableGround);
     }
 
     protected bool CanMoveRight()
     {
-        return !Physics2D.BoxCast(boxColl.bounds.center, boxColl.bounds.size, 0f, Vector2.right, 0.01f, jumpableGround);
+        return !Physics2D.BoxCast(_boxColl.bounds.center, _boxColl.bounds.size, 0f, Vector2.right, 0.01f, JumpableGround);
     }
 }

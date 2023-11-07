@@ -288,7 +288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295.9, y: 205.1}
+  m_AnchoredPosition: {x: -191.09198, y: 149.65201}
   m_SizeDelta: {x: 164.383, y: 27.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &97175139
@@ -482,7 +482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -368.808, y: 205.1}
+  m_AnchoredPosition: {x: -264, y: 149.65201}
   m_SizeDelta: {x: 164.383, y: 27.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339830131
@@ -617,7 +617,7 @@ RectTransform:
   - {fileID: 1466672890}
   - {fileID: 339830130}
   - {fileID: 97175138}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -776,7 +776,8 @@ Transform:
   m_LocalPosition: {x: 12, y: -3.05, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 451481598}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &565702377
@@ -1073,7 +1074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -368.808, y: 236.448}
+  m_AnchoredPosition: {x: -264, y: 181}
   m_SizeDelta: {x: 164.383, y: 27.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1125479418
@@ -1344,9 +1345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f55fbb12e9924d949b38a214e4227414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpableGround:
+  JumpableGround:
     serializedVersion: 2
     m_Bits: 192
+  Inventory: []
 --- !u!1 &1229140346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,7 +1691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -304, y: 236.45}
+  m_AnchoredPosition: {x: -199.19199, y: 181.00198}
   m_SizeDelta: {x: 164.383, y: 27.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1913142668
@@ -1863,9 +1865,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993a842ef57957e4b9ad69d2f04b0347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpableGround:
+  JumpableGround:
     serializedVersion: 2
     m_Bits: 136
+  Inventory: []
 --- !u!1001 &2774297336315814886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2105,7 +2108,6 @@ SceneRoots:
   - {fileID: 667279578}
   - {fileID: 45791780}
   - {fileID: 565702380}
-  - {fileID: 451481598}
   - {fileID: 1229140349}
   - {fileID: 171681560}
   - {fileID: 5541050741485223784}

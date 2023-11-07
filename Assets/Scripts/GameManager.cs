@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] FireBoy fireBoy;
-    [SerializeField] WaterGirl waterGirl;
-    [SerializeField] IntToText coinsText;
-    [SerializeField] IntToText timeText;
+    [SerializeField] FireBoy FireBoy;
+    [SerializeField] WaterGirl WaterGirl;
+    [SerializeField] IntToText CoinsText;
+    [SerializeField] IntToText TimeText;
     public static int Coins;
     public static float Timer;
 
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         if (Timer == 0){
             Application.Quit();
         }
-        timeText.UpdateText((int)Timer);
-        coinsText.UpdateText(Coins);
+        TimeText.UpdateText((int)Timer);
+        CoinsText.UpdateText(Coins);
     }
 }
