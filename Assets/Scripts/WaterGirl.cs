@@ -28,7 +28,12 @@ public class WaterGirl : Character
         {
             _rb.velocity = new Vector2(_rb.velocity.x, _jumpHeight);
         }
-    
+    }
+
+    protected override void OnTriggerEnter2D(UnityEngine.Collider2D other){
+        if (other.gameObject.CompareTag("Lava")){
+                gameObject.SetActive(false);
+            }
     }
 
 }

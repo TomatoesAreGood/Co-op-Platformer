@@ -12,7 +12,7 @@ public abstract class Character : MonoBehaviour
     public Transform Hand;
     public LayerMask JumpableGround;
     public Collectable HeldItem;
-    
+
 
     private void Start(){
         _rb = GetComponent<Rigidbody2D>();
@@ -24,6 +24,7 @@ public abstract class Character : MonoBehaviour
     }
 
     protected abstract void Update();
+    protected abstract void OnTriggerEnter2D(UnityEngine.Collider2D collision);
 
     protected bool CanJump(){
         return Physics2D.BoxCast(_boxColl.bounds.center, _boxColl.bounds.size, 0f, Vector2.down, 0.1f, JumpableGround);
