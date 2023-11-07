@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class Collectable : MonoBehaviour
 {
-    protected abstract void OnCollisionEnter2D(UnityEngine.Collision2D other);
+    protected abstract void OnTriggerEnter2D(UnityEngine.Collider2D collision);
 }
