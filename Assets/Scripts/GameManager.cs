@@ -11,15 +11,28 @@ public class GameManager : MonoBehaviour
     [SerializeField] IntToText TimeText;
     public static int Coins;
     public static float Timer;
+    public static Checkpoint Checkpoint;
 
     private void Start()
     {
         Timer = 120;
         Coins = 0;
+        Checkpoint = null;
     }
 
     private void Update()
     {
+        if (!FireBoy.gameObject.activeSelf || !WaterGirl.gameObject.activeSelf){
+            if (Checkpoint == null){
+                SceneManager.LoadScene("GamePlay");
+            }else{
+                FireBoy.gameObject.SetActive(true);
+                WaterGirl.gameObject.SetActive(true);
+                FireBoy.transform.position = Checkpoint.Pos + new Vector3(-0.5f, 0f, 0f);
+                WaterGirl.transform.position = Checkpoint.Pos + new Vector3(0.5f, 0f, 0f);
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.R)){
             SceneManager.LoadScene("GamePlay");
         }
