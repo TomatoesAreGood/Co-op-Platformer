@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -189.19196, y: 147.45203}
+  m_AnchoredPosition: {x: -785.0919, y: 469.65198}
   m_SizeDelta: {x: 164.383, y: 27.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &97175139
@@ -352,7 +352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -262.09998, y: 147.45203}
+  m_AnchoredPosition: {x: -857.99994, y: 469.65198}
   m_SizeDelta: {x: 164.383, y: 27.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339830131
@@ -876,7 +876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -262.1, y: 178.8}
+  m_AnchoredPosition: {x: -858, y: 501}
   m_SizeDelta: {x: 164.383, y: 27.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1125479418
@@ -1012,7 +1012,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 88acc7dbafa9a264697754b9afde3b78, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1032,7 +1032,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1180499275}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 88acc7dbafa9a264697754b9afde3b78, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1365,7 +1365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -197.29196, y: 178.802}
+  m_AnchoredPosition: {x: -793.1919, y: 501.00195}
   m_SizeDelta: {x: 164.383, y: 27.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1913142668
@@ -1404,7 +1404,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 88acc7dbafa9a264697754b9afde3b78, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

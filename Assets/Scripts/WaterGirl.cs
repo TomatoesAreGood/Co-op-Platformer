@@ -9,18 +9,35 @@ using UnityEngine;
 public class WaterGirl : Character
 {
     protected override void Update(){
-        _movementDirection = Input.GetAxis("Horizontal");
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            if (this._movementDirection > -1)
+            {
+                this._movementDirection -= 0.01f;
+            }
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            if (this._movementDirection < 1)
+            {
+                this._movementDirection += 0.01f;
+            }
+        }
+        else
+        {
+            this._movementDirection = 0;
+        }
 
         if (Input.GetKey(KeyCode.RightArrow)){
             if (CanMoveRight())
             {
-                _rb.velocity = new Vector2(_movementDirection * _moveSpeed, _rb.velocity.y);
+                _rb.velocity = new Vector2(this._movementDirection * _moveSpeed, _rb.velocity.y);
             }
         }
         if (Input.GetKey(KeyCode.LeftArrow)){
             if (CanMoveLeft())
             {
-                _rb.velocity = new Vector2(_movementDirection * _moveSpeed, _rb.velocity.y);
+                _rb.velocity = new Vector2(this._movementDirection * _moveSpeed, _rb.velocity.y);
             }
         }
 

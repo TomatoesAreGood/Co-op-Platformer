@@ -9,7 +9,21 @@ using UnityEngine;
 public class FireBoy : Character
 {
     protected override void Update(){
-        _movementDirection = Input.GetAxis("Horizontal");
+        if (Input.GetKey(KeyCode.A))
+        {
+            if (this._movementDirection > -1f) {
+                this._movementDirection -= 0.01f;
+            } 
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            if (this._movementDirection < 1f) {
+                this._movementDirection += 0.01f;
+            }
+        }
+        else { 
+            this._movementDirection = 0;
+        }
 
         if (Input.GetKey(KeyCode.D)){
             if (CanMoveRight()) {
