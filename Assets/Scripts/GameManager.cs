@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 
         if (!FireBoy.IsAlive || !WaterGirl.IsAlive){
             if (Checkpoint == null){
-                SceneManager.LoadScene("GamePlay");
+                SceneManager.LoadScene("Level 1");
             }else{
                 FireBoy.IsAlive = true;
                 WaterGirl.IsAlive = true;
@@ -76,8 +76,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.R)){
-            LoadEndScreen();
-            //SceneManager.LoadScene("GamePlay");
+            SceneManager.LoadScene("Level 1");
         }
 
         Timer -= Time.deltaTime;
