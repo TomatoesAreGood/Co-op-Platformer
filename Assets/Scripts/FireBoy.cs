@@ -51,8 +51,8 @@ public class FireBoy : Character
 
     protected override void OnTriggerEnter2D(UnityEngine.Collider2D other){
         if (other.gameObject.CompareTag("Water")){
-                gameObject.SetActive(false);
-            }
+                IsAlive = false;
+        }
     }
 
 }
