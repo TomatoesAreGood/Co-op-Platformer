@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public abstract class Character : MonoBehaviour
 {
@@ -28,7 +29,6 @@ public abstract class Character : MonoBehaviour
     }
 
     protected abstract void Update();
-    protected abstract void OnTriggerEnter2D(UnityEngine.Collider2D collision);
 
     public void Drop()
     {
@@ -49,6 +49,11 @@ public abstract class Character : MonoBehaviour
     protected bool CanMoveRight()
     {
         return !Physics2D.BoxCast(BoxColl.bounds.center, BoxColl.bounds.size, 0f, Vector2.right, 0.01f, JumpableGround);
+    }
+    protected virtual void OnTriggerEnter2D(UnityEngine.Collider2D other){
+        if (other.gameObject.CompareTag("Poison")){
+                IsAlive = false;
+        }
     }
  
 }

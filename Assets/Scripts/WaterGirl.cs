@@ -57,7 +57,8 @@ public class WaterGirl : Character
     protected override void OnTriggerEnter2D(UnityEngine.Collider2D other){
         if (other.gameObject.CompareTag("Lava")){
                 IsAlive = false;
-            }
+        }
+        base.OnTriggerEnter2D(other);
     }
 
 }

@@ -53,6 +53,7 @@ public class FireBoy : Character
         if (other.gameObject.CompareTag("Water")){
                 IsAlive = false;
         }
+        base.OnTriggerEnter2D(other);
     }
 
 }
