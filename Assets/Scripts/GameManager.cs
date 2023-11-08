@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _numTrophies = 0;
-        Timer = 120;
+        Timer = 500;
         Coins = 0;
         Checkpoint = null;
         FireBoy = transform.GetChild(0).gameObject.GetComponent<FireBoy>();
