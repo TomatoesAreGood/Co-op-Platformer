@@ -36,11 +36,9 @@ public class GameManager : MonoBehaviour
                     FireBoy.ExitLevel = true;
                     FireBoy.gameObject.SetActive(false);
                 }   
-                if (FireBoy.HeldItem is Trophy){
+                if (FireBoy.HeldItem != null && FireBoy.HeldItem is Trophy){
                     _numTrophies++;
-                    if (FireBoy.HeldItem.gameObject != null) {
-                        Destroy(FireBoy.HeldItem.gameObject);
-                    }
+                    DestroyImmediate(FireBoy.HeldItem.gameObject);
                     FireBoy.HeldItem = null;
                 }
             }
@@ -53,11 +51,9 @@ public class GameManager : MonoBehaviour
                     WaterGirl.ExitLevel = true;
                     WaterGirl.gameObject.SetActive(false);
                 }
-                if (WaterGirl.HeldItem is Trophy){
+                if (WaterGirl.HeldItem != null && WaterGirl.HeldItem is Trophy){
                     _numTrophies++;
-                    if (WaterGirl.HeldItem.gameObject != null) {
-                        Destroy(WaterGirl.HeldItem.gameObject);
-                    }
+                    DestroyImmediate(WaterGirl.HeldItem.gameObject);
                     WaterGirl.HeldItem = null;
                 }
             }
