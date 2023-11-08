@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
             star1.SetActive(true);
             star2.SetActive(false);
             star3.SetActive(false);
-        }else if (score < 150){
+        }else if (score < 100){
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(false);
