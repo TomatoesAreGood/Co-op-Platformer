@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelExit : MonoBehaviour
+public class Door : MonoBehaviour
 {
     public bool IsLocked;
     private int _keys;
